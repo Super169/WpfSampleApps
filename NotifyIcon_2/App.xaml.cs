@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -14,10 +15,23 @@ namespace NotifyIcon_2
     /// </summary>
     public partial class App : Application
     {
+        Mutex mutex;
+
         private System.Windows.Forms.NotifyIcon _notifyIcon;
         private bool _isExit;
         private void Application_Startup(object sender, StartupEventArgs e)
         {
+
+            bool createdNew;
+            mutex = new Mutex(true, "{SingleInstance Mutex}", out createdNew);
+            if (!createdNew)
+            {
+                mutex = null;
+                MessageBox.Show("Another instance is already running.");
+                Application.Current.Shutdown();
+                return;
+            }
+
             MainWindow = new MainWindow();
             MainWindow.Closing += MainWindow_Closing;
 
@@ -70,5 +84,13 @@ namespace NotifyIcon_2
             _notifyIcon = null;
         }
 
+        private void Application_Exit(object sender, ExitEventArgs e)
+        {
+            if (mutex != null)
+            {
+                mutex.ReleaseMutex();
+                mutex.Dispose();
+            }
+        }
     }
 }
