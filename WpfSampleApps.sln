@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleInstance_2", "SingleI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleInstance_3", "SingleInstance_3\SingleInstance_3.csproj", "{C3AAC8E6-354F-4A02-93E9-BABBF8CBCCD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotifyIcon_1", "NotifyIcon_1\NotifyIcon_1.csproj", "{DB14D50A-7DBD-49F6-ACEE-4951E44F61BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C3AAC8E6-354F-4A02-93E9-BABBF8CBCCD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3AAC8E6-354F-4A02-93E9-BABBF8CBCCD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3AAC8E6-354F-4A02-93E9-BABBF8CBCCD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB14D50A-7DBD-49F6-ACEE-4951E44F61BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB14D50A-7DBD-49F6-ACEE-4951E44F61BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB14D50A-7DBD-49F6-ACEE-4951E44F61BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB14D50A-7DBD-49F6-ACEE-4951E44F61BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
